@@ -39,12 +39,12 @@ for i in range(iterations):
     new_bool = (np.abs(z) <= escape_limit)
     escape_array+=new_bool
 
-##plt.imshow(np.dstack((np.floor(255*np.sin(escape_array*0.03)**2),
-##                      np.floor(255*np.sin(escape_array*0.03+(1/3)*np.pi)**2),
-##                      np.floor(255*np.sin(escape_array*0.03+(2/3)*np.pi)**2))).astype(int),
-##           extent=(left_lim, right_lim, lower_lim, upper_lim))  ##This will produce a rainbow coloured image
+plt.imshow(np.dstack((np.floor(255*np.sin(escape_array*0.03)**2),
+                      np.floor(255*np.sin(escape_array*0.03+(1/3)*np.pi)**2),
+                      np.floor(255*np.sin(escape_array*0.03+(2/3)*np.pi)**2))).astype(int),
+           extent=(left_lim, right_lim, lower_lim, upper_lim))  ##This will produce a rainbow coloured image
 
-plt.imshow(escape_array, extent=(left_lim, right_lim, lower_lim, upper_lim))
-plt.colorbar() ##This will produce a blue/green/yellow coloured graph by default, but the colour scheme can be changed
+##plt.imshow(escape_array, extent=(left_lim, right_lim, lower_lim, upper_lim))
+##plt.colorbar() ##This will produce a blue/green/yellow coloured graph by default, but the colour scheme can be changed
 
 plt.show()
